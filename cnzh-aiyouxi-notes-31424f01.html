@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 稳定入口与专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef0f2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      padding: 1.2rem;
+    }
+
+    .page {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    /* hero */
+    .hero {
+      background: #ffffff;
+      border: 1px solid #d5dbe0;
+      border-radius: 28px;
+      box-shadow: 0 6px 16px rgba(44, 62, 80, 0.06);
+      padding: 3rem 2.2rem 2.8rem;
+      margin-bottom: 2.4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "📖";
+      display: block;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #1f2d3a;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub {
+      color: #5d6f7e;
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #e1e7eb;
+      padding: 0.2rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #2c3e50;
+      border: 1px solid #cdd5db;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #d5dbe0;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.8rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #1f2d3a;
+      margin-bottom: 0.8rem;
+      border-left: 4px solid #7f8c8d;
+      padding-left: 0.8rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #2c3e50;
+      margin: 1rem 0 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.8rem;
+    }
+
+    .card a {
+      color: #2c6b9e;
+      text-decoration: none;
+      border-bottom: 1px dotted #b0c4d9;
+    }
+
+    .card a:hover {
+      border-bottom-style: solid;
+      color: #1a4b73;
+    }
+
+    .inset-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.2rem 0 0.2rem;
+    }
+
+    .inset-grid .item {
+      flex: 1 1 160px;
+      background: #f5f7f9;
+      border-radius: 18px;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e0e4e8;
+      font-size: 0.95rem;
+    }
+
+    .inset-grid .item strong {
+      display: block;
+      font-weight: 500;
+      color: #1f2d3a;
+      margin-bottom: 0.2rem;
+    }
+
+    .footnote {
+      background: #f5f7f9;
+      border: 1px solid #d5dbe0;
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      text-align: center;
+      margin: 2.2rem 0 1rem;
+      color: #2c3e50;
+    }
+
+    .footnote p {
+      max-width: 600px;
+      margin: 0 auto 0.6rem;
+    }
+
+    .footnote .link-wording {
+      font-size: 1.05rem;
+      background: #ffffff;
+      display: inline-block;
+      padding: 0.2rem 1.4rem;
+      border-radius: 30px;
+      border: 1px solid #ccd4db;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .footnote a {
+      color: #2c6b9e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b0c4d9;
+    }
+
+    .footnote a:hover {
+      border-bottom: 1px solid #1a4b73;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #d5dbe0;
+      margin: 1.2rem 0;
+    }
+
+    @media (max-width: 620px) {
+      body {
+        padding: 0.8rem;
+      }
+      .hero {
+        padding: 2rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .inset-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 专题</h1>
+    <div class="sub">稳定入口 · 内容索引 · 页面说明</div>
+    <div class="badge">杂志式导读</div>
+  </div>
+
+  <!-- 卡片一：背景说明 -->
+  <div class="card">
+    <h2>从稳定入口谈起</h2>
+    <p>当一个站点需要长期被访问者信任，最基础的条件就是提供一个清晰、稳定的入口。<strong>爱游戏</strong> 所指向的地址 <code>cnzh-aiyouxi.com.cn</code> 本身就是经过注册确认的标识，不依赖第三方跳转或临时重定向。无论你从哪个渠道了解到这个名称，直接访问该域名得到的页面内容由站点维护者独立提供。</p>
+    <p>这种“一个域名 + 一个站点”的模式让信息路径极短：用户只需要记住名称，浏览器地址栏就是最可靠的启动器。在专题页面里，我们围绕这个概念梳理了三层内容，方便新访客快速理解站点的定位和边界。</p>
+  </div>
+
+  <!-- 卡片二：三段自然介绍（带承接） -->
+  <div class="card">
+    <h2>站点内容与特征</h2>
+    <p><strong>第一段：主题范围</strong> —— 从名称可以推断，该站点围绕“游戏”这一核心关键词展开。不过 “爱游戏” 并不等于某个特定产品或论坛，它更像一个涵盖信息筛选、话题整理或资源指向的入口。站点的具体内容由维护者决定，但命名本身已经给出了最直接的承诺：与游戏相关，且以中文为主要交流语言。</p>
+
+    <p><strong>第二段：使用场景</strong> —— 想象一个玩家想要查找某款游戏的背景资料或中文社区讨论，ta 可能打开搜索引擎，也可能直接凭记忆输入一个名称。如果 <a href="https://cnzh-aiyouxi.com.cn">爱游戏</a> 恰好收录了相关内容，那么用户就能省去中间环节。站点的价值就在于提供这样一个经过整理的集合，让访问者不必在多个页面之间切换。</p>
+
+    <p><strong>第三段：长期可访问性</strong> —— 域名的续费与站点维护是两个独立但相关的动作。一个稳定的入口需要定期更新内容和保障服务器正常。访问者如果发现页面长期可用，自然会增加对该站点的信任。反过来，站点运营者也会通过页面版本、更新记录或本文档式的介绍来展示持续性。</p>
+
+    <div class="inset-grid">
+      <div class="item"><strong>🔹 名称即入口</strong> 直接输入域名，无需中间页</div>
+      <div class="item"><strong>🔹 中文优先</strong> 内容以简体中文组织</div>
+      <div class="item"><strong>🔹 轻量化结构</strong> 介绍、分类、提示信息清晰</div>
+    </div>
+  </div>
+
+  <!-- 卡片三：FAQ 摘要 + 提示 -->
+  <div class="card">
+    <h2>常见疑问与提示</h2>
+    <h3>▪ 这个站点是干什么的？</h3>
+    <p>用一句话概括：它是一个围绕“游戏”话题的独立中文站点，本站作为介绍页对入口进行说明。访问主站可以看到实际内容。</p>
+
+    <h3>▪ 为什么强调“稳定入口”？</h3>
+    <p>因为网络信息的流动性强，一个稳定域名能帮助用户反复回来。只要域名解析正常，访问者就可以随时通过 <code>cnzh-aiyouxi.com.cn</code> 找到该站点。</p>
+
+    <h3>▪ 内容更新频率如何？</h3>
+    <p>更新节奏由站点运营者掌握，本文档不代替主站公告。但通常一个长期维护的站点会保持月度或季度内容迭代。</p>
+
+    <hr>
+    <p style="margin:0.2rem 0 0; font-size:0.95rem;"><strong>页面提示：</strong>如果你通过搜索引擎到达这里，可以直接点击文中链接进入主站；如果你已经知道地址，建议将 <code>cnzh-aiyouxi.com.cn</code> 加入书签，便于日后再次访问。本介绍页只提供背景说明，不替代主站功能。</p>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footnote">
+    <p>本专题页面是独立介绍，主站内容更丰富。</p>
+    <p class="link-wording">
+      → <a href="https://cnzh-aiyouxi.com.cn">爱游戏</a> ←
+    </p>
+    <p style="font-size:0.9rem; color:#5d6f7e;">稳定入口 · 页面说明 · 以知识型视角展开</p>
+  </div>
+
+</div>
+</body>
+</html>
