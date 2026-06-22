@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>满冠体育 · 资料整理与信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f4f7;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* hero 段 — 开场短句 */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0,0,0,0.04);
+            padding: 3.2rem 2.2rem 2.6rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #e7eaef;
+            text-align: left;
+        }
+
+        .hero p:first-of-type {
+            font-size: 1.6rem;
+            font-weight: 350;
+            letter-spacing: 0.02em;
+            color: #2a3c4e;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid #7899b0;
+            padding-left: 1.2rem;
+        }
+
+        .hero .lead {
+            font-size: 1.1rem;
+            color: #3f5568;
+            max-width: 740px;
+            margin-top: 0.8rem;
+        }
+
+        /* 分区卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0,0,0,0.04);
+            border: 1px solid #e2e6ed;
+            padding: 2rem 2rem 2.4rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 450;
+            color: #1d2d3d;
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background: #9bb5c9;
+            border-radius: 6px;
+            margin-right: 14px;
+        }
+
+        /* 特点列表 —— 以简洁描述为主 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            margin-top: 0.6rem;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: #f9fafc;
+            padding: 1.2rem 1.4rem;
+            border-radius: 18px;
+            border: 1px solid #e8ecf2;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.01);
+        }
+
+        .feature-item span {
+            display: block;
+            font-weight: 500;
+            color: #28475e;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-item small {
+            color: #4c6278;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: block;
+        }
+
+        /* 承接段与内联链接样式 */
+        .link-sentence {
+            font-size: 1rem;
+            background: #f8faff;
+            padding: 1.2rem 1.8rem;
+            border-radius: 60px;
+            border: 1px solid #dde3ec;
+            margin: 1.8rem 0 0.6rem;
+            display: inline-block;
+        }
+
+        a {
+            color: #2b5b7a;
+            text-decoration: none;
+            border-bottom: 1px solid #b8ccdb;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0f3b56;
+            border-bottom-color: #2b5b7a;
+        }
+
+        .subtle-divider {
+            width: 60px;
+            height: 2px;
+            background: #d5dee8;
+            margin: 1.8rem 0 1rem;
+        }
+
+        .closing-note {
+            margin-top: 1rem;
+            font-size: 0.98rem;
+            color: #3d556a;
+            border-top: 1px solid #e2e7ef;
+            padding-top: 1.6rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.6rem;
+        }
+
+        .closing-note small {
+            color: #5a7186;
+        }
+
+        /* FAQ 摘要卡片风格 */
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.6rem;
+        }
+
+        .faq-mini p {
+            background: #f6f8fb;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #e1e7ef;
+            font-size: 0.96rem;
+        }
+
+        .faq-mini p strong {
+            color: #264a60;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+
+        .footnote {
+            font-size: 0.9rem;
+            color: #62788e;
+            margin-top: 2rem;
+            padding-top: 0.6rem;
+            border-top: 1px dashed #d3dce7;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .hero {
+                padding: 2rem 1.4rem 1.8rem;
+            }
+            .hero p:first-of-type {
+                font-size: 1.35rem;
+            }
+            .card {
+                padding: 1.6rem 1.2rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+            .link-sentence {
+                font-size: 0.95rem;
+                padding: 1rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- hero 开场短句 + 承接 -->
+    <div class="hero">
+        <p>当体育信息变得零散，索引便成为一种整理方式。</p>
+        <div class="lead">
+            从赛事记录到训练思路，从运动文化到场地资料——<a href="https://cnweb-manguansports.com">满冠体育</a>以安静的方式将相关内容汇集在一起。这里不追逐热点，只提供结构化的素材脉络。
+        </div>
+    </div>
+
+    <!-- 承接段落：资料整理视角 -->
+    <div class="card">
+        <h2>从整理出发，而非从结论出发</h2>
+        <p style="margin-bottom: 1.2rem;">
+            很多有价值的体育内容分散在访谈、文档、数据表甚至个人笔记中。整理的意义在于将它们按照逻辑重新排列，让后续的查阅者可以沿着一条清晰的线索找到自己需要的部分。<a href="https://cnweb-manguansports.com">满冠体育</a>所做的，正是这样一份偏重索引与归纳的工作——把不同来源的运动知识按主题归档，同时保留各自的上下文。
+        </p>
+        <div class="subtle-divider"></div>
+        <p>
+            无论是业余爱好者还是关注运动科学的读者，都能在分类条目下发现相对完整的叙述。这种整理方式更接近图书馆的索引卡片，它不代替阅读，但可以告诉你去哪里寻找。
+        </p>
+    </div>
+
+    <!-- 特点列表：偏知识型，克制描述 -->
+    <div class="card">
+        <h2>信息索引的几个侧重点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span>主题归档</span>
+                <small>按运动项目、训练方法、运动心理等维度归类，减少重复查找。</small>
+            </div>
+            <div class="feature-item">
+                <span>来源可溯</span>
+                <small>每一条资料都尽量标注原始出处或参照来源，便于核实与延伸阅读。</small>
+            </div>
+            <div class="feature-item">
+                <span>结构化摘要</span>
+                <small>长篇内容配有要点提炼，快速把握核心论述，细节留待原文。</small>
+            </div>
+            <div class="feature-item">
+                <span>定期补录</span>
+                <small>根据公开资料与可靠信源，持续补充新的条目与修正旧有内容。</small>
+            </div>
+        </div>
+        <!-- 自然嵌入链接的句子 -->
+        <div class="link-sentence">
+            如果你也是那种喜欢先浏览目录再深入阅读的人，或许可以到 <a href="https://cnweb-manguansports.com">满冠体育</a> 看一看当前的分类架构。
+        </div>
+    </div>
+
+    <!-- 场景提示：温和引入 -->
+    <div class="card">
+        <h2>这样的索引适合谁</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem;">
+            <p style="flex: 1 1 200px; background: #f4f7fc; padding: 1rem 1.2rem; border-radius: 20px; border: 1px solid #e0e6f0;">
+                ⚬ 准备写运动相关文章或报告，需要收集背景资料的人。
+            </p>
+            <p style="flex: 1 1 200px; background: #f4f7fc; padding: 1rem 1.2rem; border-radius: 20px; border: 1px solid #e0e6f0;">
+                ⚬ 对某个运动领域感兴趣，想系统了解其发展脉络的读者。
+            </p>
+            <p style="flex: 1 1 200px; background: #f4f7fc; padding: 1rem 1.2rem; border-radius: 20px; border: 1px solid #e0e6f0;">
+                ⚬ 教练或体育教育者，寻找可参考的教学素材与案例记录。
+            </p>
+        </div>
+        <div style="margin-top: 1.2rem; font-size: 0.95rem; color: #3d5a74;">
+            这些场景的共同点是：先理清信息脉络，再决定如何使用。整理本身不提供答案，但提供更清晰的提问起点。
+        </div>
+    </div>
+
+    <!-- FAQ 摘要（轻量） -->
+    <div class="card">
+        <h2>常见疑问摘要</h2>
+        <div class="faq-mini">
+            <p><strong>内容更新频率？</strong> 根据可获取的新资料不定期补充，没有固定周期，但每次变更会记录版本说明。</p>
+            <p><strong>是否包含个人训练建议？</strong> 不直接提供训练方案。索引内容以资料整理为主，具体实践请咨询专业人士。</p>
+            <p><strong>可以贡献资料线索吗？</strong> 如果你有可靠的信息来源或值得收录的内容，可以通过站内方式留言。</p>
+        </div>
+        <div class="closing-note">
+            <span>📋 索引的边界在于：我们只整理已经存在的公开知识，不创造未经证实的方法。</span>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="card" style="text-align: left; background: #fbfdff;">
+        <p style="font-size: 1rem;">
+            <a href="https://cnweb-manguansports.com">满冠体育</a> 所呈现的，是一种偏向资料整理与信息索引的尝试。它不追求覆盖所有领域，但希望每一个收录的主题都能提供扎实的线索。如果你恰好需要这样的视角，或许可以把它当作一个安静的起点。
+        </p>
+        <div class="footnote">
+            · 页面所提及的信息整理原则仅代表当前阶段的思路，未来可能根据实际情况调整。
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
